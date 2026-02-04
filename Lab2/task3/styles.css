@@ -1,0 +1,462 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --text-primary: #1F2328;
+    --text-secondary: #656D76;
+    --border: #D0D7DE;
+    --blue: #0969DA;
+    --btn-dark: #21262D;
+    --btn-light: #F6F8FA;
+    --white: #ffffff;
+    --card-bg: #F6F8FA;
+    --card-enterprise-bg: #FFFFFF;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+    line-height: 1.5;
+    padding-bottom: 80px;
+}
+
+/* HEADER STYLES */
+.main-header {
+    border-bottom: 1px solid var(--border);
+    padding: 16px 32px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    color: var(--text-primary);
+    margin-right: 8px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.main-nav li {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.main-nav li:hover {
+    color: var(--text-primary);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-arrow {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid var(--text-secondary);
+    opacity: 0.5;
+}
+
+/* SEARCH BAR */
+.search-container {
+    background: #f6f8fa;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    width: 240px;
+}
+
+.search-container input {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+    color: var(--text-secondary);
+}
+
+.search-slash {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.btn-outline-header {
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.btn-outline-header:hover {
+    background-color: #f6f8fa;
+}
+
+
+@media (max-width: 900px) {
+    .main-nav, .search-container {
+        display: none;
+    }
+}
+.hero {
+    text-align: center;
+    max-width: 900px;
+    margin: 80px auto 60px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.btn-hero {
+    background: var(--btn-dark);
+    color: white;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* PRICING GRID */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: stretch;
+}
+
+/* CARD STYLES */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    height: 42px; 
+    margin-bottom: 16px;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    font-weight: 600;
+}
+
+.price .currency {
+    font-size: 24px;
+    margin-right: 2px;
+    position: relative;
+    top: -12px;
+}
+
+.price {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.price .unit {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-left: 4px;
+}
+
+.period {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.starting-at {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: inline-block;
+    padding: 2px 8px;
+    margin-bottom: 8px;
+}
+
+/* BUTTONS IN CARDS */
+.btn {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.btn-outline {
+    background: white;
+    border-color: var(--border);
+    color: var(--blue);
+}
+
+.btn-dark {
+    background: var(--btn-dark);
+    color: white;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* LISTS */
+.feature-list {
+    list-style: none;
+    font-size: 14px;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.chevron {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid var(--text-primary);
+    border-bottom: 1.5px solid var(--text-primary);
+    transform: rotate(-45deg);
+}
+
+.list-title {
+    font-weight: 600;
+    padding-left: 0 !important;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrow-left {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 1.5px solid var(--text-primary);
+    border-left: 1.5px solid var(--text-primary);
+    transform: rotate(-45deg);
+    margin-right: 8px;
+}
+
+.subtext {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.addon-separator {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+.addon-separator.blue {
+    color: var(--blue);
+}
+
+/* ENTERPRISE CARD SPECIALS */
+.card-enterprise {
+    background: white;
+    border: 2px solid var(--blue);
+    position: relative;
+    box-shadow: 0 8px 24px rgba(140,149,159,0.2);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+}
+
+/* ADD-ONS BOTTOM SECTION */
+.addons-section {
+    max-width: 1280px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.addons-section h2 {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.addon-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    background: white;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.icon svg { fill: currentColor; }
+.icon.purple { background: #F2F0FD; color: #8250DF; }
+.icon.green { background: #DAFBE1; color: #1A7F37; }
+.icon.blue { background: #DDF4FF; color: #0969DA; }
+.icon.pink { background: #FFEEF8; color: #BF3989; }
+.icon.orange { background: #FFF1E5; color: #BC4C00; }
+.icon.yellow { background: #FFF8C5; color: #9A6700; }
+
+.icon-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.badge-new {
+    border: 1px solid #1A7F37;
+    color: #1A7F37;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    height: 24px;
+}
+
+.addon-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.addon-card p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.addon-card a {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+.addon-card a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+.addon-card {
+    width: 100%;
+    max-width: 380px;
+}
+
+
+@media (max-width: 1024px) {
+    .pricing-container, .addons-grid {
+        grid-template-columns: 1fr;
+    }
+    .btn-group {
+        flex-direction: column;
+    }
+}
